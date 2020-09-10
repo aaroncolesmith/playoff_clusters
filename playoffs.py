@@ -3,9 +3,10 @@ import streamlit as st
 import plotly_express as px
 
 st.title('NBA Playoffs Clusters')
+st.write('This is an analysis of every playoff game of the 2020 season, clustering each player\'s game performance across about 20 statistics.')
 df=pd.read_csv('./playoffs.csv')
 p=pd.read_csv('./pca.csv')
-st.write(df.head(3))
+# st.write(df.head(3))
 df['Cluster']=df['Cluster'].astype('str')
 
 fig=px.scatter(df,
